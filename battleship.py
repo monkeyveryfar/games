@@ -102,20 +102,19 @@ def place_ship(ship, length, width, new_grid):
         ship_placed = True
     
 def print_grid(g):
-  a = 10
-  z = 10
+  a = z = 10
   for k in range(10):
     z = z - 1
     g_row = g[z]
-    line = ""
 
     a = a - 1
+    print(a, end="")
     for i in g_row:
       if i == 0:
-        line = line + ". "
+        print(colored("~", "blue"), end=" ")
       else:
-        line = line + i + " "
-    print(str(a) , line)
+        print(colored(str(i), "grey"), end=" ")
+    print()
   print("  0 1 2 3 4 5 6 7 8 9")
   z = z - 1
 
